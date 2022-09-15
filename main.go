@@ -7,8 +7,11 @@ import (
 )
 
 func hitungVoucher(kodeVoucher string, totalHarga float64) {
-	var harga, totalPotongan, totalPembayaran float64
-	var diskon string
+	var harga float64 = totalHarga
+	var totalPotongan float64 = 0
+	var totalPembayaran float64 = totalHarga
+
+	var diskon string = "0%"
 
 	if kodeVoucher == "DumbWMerchBerkah" && totalHarga >= 50000 {
 		potongan := totalHarga * 25 / 100
